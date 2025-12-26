@@ -1,97 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
-   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Responsive Landing Page</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web Design Landing Page</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon" />
+
   <style>
-    .nav-links a:hover {
-  color: #ffcc00;
-  transition: color 0.3s ease;
-}
+    /* RESET */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-.section1, .section2, .section3 {
-  transition: transform 0.3s ease;
-}
+    html {
+      scroll-behavior: smooth;
+    }
 
-.section1:hover, .section2:hover, .section3:hover {
-  transform: scale(1.02);
-}
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body, html { font-family: Arial, sans-serif; scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
     /* NAVBAR */
     header {
       position: fixed;
-      top: 0; left: 0;
+      top: 0;
+      left: 0;
       width: 100%;
-      background: transparent;
-      padding: 15px 20px;
+      padding: 15px 24px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      background: transparent;
       z-index: 1000;
-      transition: background 0.3s;
+      transition: background 0.3s ease;
     }
-    header.scrolled { background: #222; }
+
+    header.scrolled {
+      background: #1e1e1e;
+    }
+
     .logo {
-      color: white;
-      font-size: 1.5em;
+      color: #ffffff;
+      font-size: 1.4rem;
       font-weight: bold;
       text-decoration: none;
-      transition: color 0.3s;
+      transition: color 0.3s ease;
     }
-    header.scrolled .logo { color: #ffcc00; }
+
+    header.scrolled .logo {
+      color: #ffcc00;
+    }
 
     nav ul {
       list-style: none;
       display: flex;
     }
-    nav li { margin-left: 20px; }
-    nav a {
-      text-decoration: none;
-      color: white;
-      padding: 8px 12px;
-      transition: color 0.3s, background 0.3s;
-    }
-    nav a:hover {
-      background: white;
-      color: black;
-      border-radius: 4px;
+
+    nav li {
+      margin-left: 20px;
     }
 
-    /* HAMBURGER MENU */
+    nav a {
+      text-decoration: none;
+      color: #ffffff;
+      padding: 8px 12px;
+      border-radius: 4px;
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background: #ffffff;
+      color: #000000;
+    }
+
+    /* HAMBURGER */
     .hamburger {
       display: none;
       flex-direction: column;
       cursor: pointer;
     }
+
     .hamburger span {
-      background: white;
-      height: 3px;
       width: 25px;
-      margin: 4px;
+      height: 3px;
+      background: #ffffff;
+      margin: 4px 0;
       border-radius: 2px;
-      transition: all 0.3s;
+      transition: 0.3s;
     }
 
     /* MOBILE NAV */
     @media (max-width: 768px) {
       nav ul {
         position: fixed;
-        top: 0; right: -220px;
-        background: #222;
-        flex-direction: column;
-        height: 100vh;
+        top: 0;
+        right: -220px;
         width: 200px;
+        height: 100vh;
+        background: #1e1e1e;
+        flex-direction: column;
+        align-items: center;
         padding-top: 100px;
-        text-align: center;
-        transition: right 0.4s ease-in-out;
+        transition: right 0.4s ease;
       }
-      nav ul.show { right: 0; }
-      nav li { margin: 20px 0; }
-      .hamburger { display: flex; }
+
+      nav ul.show {
+        right: 0;
+      }
+
+      nav li {
+        margin: 20px 0;
+      }
+
+      .hamburger {
+        display: flex;
+      }
     }
 
     /* SECTIONS */
@@ -100,24 +127,46 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 2em;
-      color: white;
+      text-align: center;
+      font-size: 2rem;
+      color: #ffffff;
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 1s ease, transform 1s ease;
+      transition: opacity 0.8s ease, transform 0.8s ease;
     }
+
     section.visible {
       opacity: 1;
       transform: translateY(0);
     }
-    .section1 { background: #1abc9c; }
-    .section2 { background: #3498db; }
-    .section3 { background: #9b59b6; }
+
+    .section1 {
+      background: #1abc9c;
+    }
+
+    .section2 {
+      background: #3498db;
+    }
+
+    .section3 {
+      background: #9b59b6;
+    }
+
+    /* HOVER EFFECT */
+    .section1:hover,
+    .section2:hover,
+    .section3:hover {
+      transform: scale(1.02);
+    }
   </style>
 </head>
+
 <body>
+
+  <!-- HEADER -->
   <header id="navbar">
-    <a href="#" class="logo">MySite</a>
+    <a href="#s1" class="logo">SaadAffan</a>
+
     <nav>
       <ul id="nav-links">
         <li><a href="#s1">Home</a></li>
@@ -125,6 +174,7 @@
         <li><a href="#s3">Contact</a></li>
       </ul>
     </nav>
+
     <div class="hamburger" id="hamburger">
       <span></span>
       <span></span>
@@ -132,37 +182,51 @@
     </div>
   </header>
 
-  <section id="s1" class="section1">Welcome to My Landing Page</section>
-  <section id="s2" class="section2">About Us</section>
-  <section id="s3" class="section3">Contact</section>
+  <!-- SECTIONS -->
+  <section id="s1" class="section1">
+    <div>Welcome to the Web Design Landing Page</div>
+  </section>
 
+  <section id="s2" class="section2">
+    <div>Clean. Responsive. Modern UI.</div>
+  </section>
+
+  <section id="s3" class="section3">
+    <div>Get in Touch</div>
+  </section>
+
+  <!-- SCRIPT -->
   <script>
-    // Navbar scroll color change
-    window.addEventListener('scroll', function() {
-      const navbar = document.getElementById('navbar');
-      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    // Navbar background change on scroll
+    window.addEventListener("scroll", () => {
+      const navbar = document.getElementById("navbar");
+      navbar.classList.toggle("scrolled", window.scrollY > 50);
     });
 
-    // Hamburger toggle
-    const hamburger = document.getElementById('hamburger');
-    const navLinks = document.getElementById('nav-links');
-    hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('show');
+    // Hamburger menu toggle
+    const hamburger = document.getElementById("hamburger");
+    const navLinks = document.getElementById("nav-links");
+
+    hamburger.addEventListener("click", () => {
+      navLinks.classList.toggle("show");
     });
 
-    // Fade-in sections on scroll
+    // Section reveal on scroll
     const sections = document.querySelectorAll("section");
-    const revealOnScroll = () => {
-      const triggerBottom = window.innerHeight * 0.8;
-      sections.forEach(sec => {
-        const secTop = sec.getBoundingClientRect().top;
-        if(secTop < triggerBottom) {
-          sec.classList.add("visible");
+
+    const revealSections = () => {
+      const triggerPoint = window.innerHeight * 0.8;
+      sections.forEach(section => {
+        const sectionTop = section.getBoundingClientRect().top;
+        if (sectionTop < triggerPoint) {
+          section.classList.add("visible");
         }
       });
     };
-    window.addEventListener("scroll", revealOnScroll);
-    revealOnScroll(); // run once on load
+
+    window.addEventListener("scroll", revealSections);
+    revealSections();
   </script>
+
 </body>
 </html>
