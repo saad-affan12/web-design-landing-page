@@ -1,30 +1,31 @@
-# PRODIGY_WD_01 – Responsive Landing Page
+# Web Design Landing Page
 
-This is my **Task 1 submission** for the **Prodigy Infotech Web Development Internship**.
+A responsive and modern landing page built with a focus on clean UI, usability, and cross-device compatibility.
 
 ---
 
 ## 🚀 Features
-- Fully responsive landing page
+- Fully responsive layout (desktop, tablet, mobile)
 - Navigation bar with hamburger menu
-- Navbar color changes on scroll
+- Dynamic navbar color change on scroll
 - Clean, modern design with hover effects
-- Favicon with my initials (SA)
+- Custom favicon with initials (SA)
 
 ---
 
 ## 🔗 Live Demo
-[Click here to view the project](https://saad-affan12.github.io/PRODIGY_WD_01/)
+👉 https://saad-affan12.github.io/web-design-landing-page/
+
+---
+
+## 🛠️ Tech Stack
+- HTML5
+- CSS3
+- JavaScript
 
 ---
 
 ## 📂 How to Run Locally
 1. Clone the repository:
    ```bash
-   git clone https://github.com/saad-affan12/PRODIGY_WD_01.git
-
-
----
-
-✅ Next step: Add this README to your repo.  
-Would you like me to **package everything (index.html + favicon + polished README.md) into a new ZIP** so you can upload directly instead of editing files manually?
+   git clone https://github.com/saad-affan12/web-design-landing-page.git
