@@ -13,6 +13,19 @@ A responsive and modern landing page built with a focus on clean UI, usability, 
 
 ---
 
+## 🖼️ Screenshots
+
+### Home Page
+![Home Page](screenshots/home.png)
+
+### About Page
+![About Page](screenshots/about.png)
+
+### Contact Page
+![Contact Page](screenshots/contact.png)
+
+---
+
 ## 🔗 Live Demo
 👉 https://saad-affan12.github.io/web-design-landing-page/
 
